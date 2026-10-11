@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Opportunity Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="mark">R</span><div><strong>Research Portal</strong><small>FAST-NUCES · Faculty Opportunities</small></div></div><span class="api-state" id="apiState">Checking API…</span></header>
+  <main class="layout">
+    <section class="intro"><p class="eyebrow">RESEARCH, TOGETHER</p><h1>Find your next research opportunity.</h1><p>Explore faculty projects, review the details, and keep openings up to date.</p></section>
+    <div id="message" class="message" role="status" hidden></div>
+    <section class="workspace">
+      <div class="list-panel"><div class="section-head"><div><p class="eyebrow">OPPORTUNITIES</p><h2>Open projects</h2></div><button class="button primary" id="newButton">＋ New opportunity</button></div><div id="opportunityList" class="opportunity-list"></div></div>
+      <aside class="form-panel"><div class="section-head"><div><p class="eyebrow">MANAGE A PROJECT</p><h2 id="formHeading">Create opportunity</h2></div></div>
+        <form id="opportunityForm">
+          <label>Research title<input name="title" required maxlength="180" placeholder="e.g. Vision for Crop Health"></label>
+          <div class="two-col"><label>Research area<input name="research_area" required placeholder="Computer Vision"></label><label>Department<input name="department" required placeholder="Computer Science"></label></div>
+          <label>Description<textarea name="description" required rows="3" placeholder="What will the student work on?"></textarea></label>
+          <div class="two-col"><label>Faculty member<input name="faculty_name" required placeholder="Dr. Sara Khan"></label><label>Required skills<input name="required_skills" required placeholder="Python, ML"></label></div>
+          <div class="two-col"><label>Positions<input name="positions" type="number" required min="1" step="1" value="1"></label><label>Application deadline<input name="deadline" type="date" required></label></div>
+          <label>Status<select name="status" required><option>Open</option><option>Closed</option></select></label>
+          <div class="form-actions"><button class="button primary" type="submit" id="submitButton">Create opportunity</button><button class="button secondary" type="button" id="cancelButton" hidden>Cancel edit</button></div>
+        </form>
+      </aside>
+    </section>
+    <section id="details" class="details" hidden></section>
+    <footer>Research Opportunity Portal <span>Student-friendly project · Python API · MySQL</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
