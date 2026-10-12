@@ -261,9 +261,6 @@ body {
     font-size: 13px;
 }
 
-/* =========================
-   Forms & Inputs
-========================= */
 
 form {
     display: grid;
@@ -314,9 +311,6 @@ textarea {
     margin-top: 4px;
 }
 
-/* =========================
-   Messages & Alerts
-========================= */
 
 .message {
     margin: 0 0 15px;
@@ -335,9 +329,6 @@ textarea {
     color: var(--red);
 }
 
-/* =========================
-   Opportunity Details
-========================= */
 
 .details {
     margin-top: 20px;
@@ -385,9 +376,7 @@ textarea {
     color: var(--red);
 }
 
-/* =========================
-   Footer
-========================= */
+
 
 footer {
     margin-top: 28px;
@@ -401,10 +390,6 @@ footer span {
     color: #8c9790;
 }
 
-/* =========================
-   Responsive - Tablets
-   Screens <= 800px
-========================= */
 
 @media (max-width: 800px) {
 
@@ -425,10 +410,7 @@ footer span {
     }
 }
 
-/* =========================
-   Responsive - Mobile
-   Screens <= 500px
-========================= */
+
 
 @media (max-width: 500px) {
 
