@@ -10,9 +10,6 @@
     --amber: #8b5c13;
 }
 
-/* =========================
-   Global Styles
-========================= */
 
 * {
     box-sizing: border-box;
@@ -25,9 +22,6 @@ body {
     font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* =========================
-   Header / Navigation
-========================= */
 
 .topbar {
     height: 72px;
@@ -67,7 +61,7 @@ body {
     font-weight: 700;
 }
 
-/* API Status */
+
 
 .api-state {
     font-size: 12px;
@@ -92,9 +86,7 @@ body {
     background: #c45454;
 }
 
-/* =========================
-   Main Layout
-========================= */
+
 
 .layout {
     max-width: 1160px;
@@ -127,9 +119,7 @@ body {
     margin: 0;
 }
 
-/* =========================
-   Workspace
-========================= */
+
 
 .workspace {
     display: grid;
@@ -167,9 +157,7 @@ body {
     margin-bottom: 3px;
 }
 
-/* =========================
-   Buttons
-========================= */
+
 
 .button {
     border: 0;
@@ -194,9 +182,7 @@ body {
     color: var(--green);
 }
 
-/* =========================
-   Opportunity List & Cards
-========================= */
+
 
 .opportunity-list {
     display: grid;
@@ -234,7 +220,7 @@ body {
     margin: 0;
 }
 
-/* Badges */
+
 
 .badge {
     display: inline-flex;
@@ -264,7 +250,7 @@ body {
     font-size: 11px;
 }
 
-/* Empty State */
+
 
 .empty {
     padding: 32px 12px;
