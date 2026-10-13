@@ -99,10 +99,10 @@ Example create body:
 
 My own public GitHub repository:
 
-`GitHub Repository: <https://github.com/amad-mugal/research-opportunity-portal.git>`
+`GitHub Repository: https://github.com/amad-mugal/research-opportunity-portal.git`
 
 ## One-minute demo video
 
 Keeping the recording to 60 seconds or less and showing the running app:
 
-`Demonstration video: <https://drive.google.com/file/d/1KfLKhGfMl1tx4O65hFFCpnoHQ7VhT6KQ/view?usp=share_link>`
+`Demonstration video: https://drive.google.com/file/d/1KfLKhGfMl1tx4O65hFFCpnoHQ7VhT6KQ/view?usp=share_link`
