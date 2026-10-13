@@ -97,8 +97,8 @@ Example create body:
 
 ## GitHub and meaningful commits
 
-My own public GitHub repository: https://github.com/amad-mugal/research-opportunity-portal
+https://github.com/amad-mugal/research-opportunity-portal
 
 ## One-minute demo video
 
-Demonstration video (60 seconds or less): https://drive.google.com/file/d/1KfLKhGfMl1tx4O65hFFCpnoHQ7VhT6KQ/view?usp=share_link
+https://drive.google.com/file/d/1KfLKhGfMl1tx4O65hFFCpnoHQ7VhT6KQ/view?usp=share_link
