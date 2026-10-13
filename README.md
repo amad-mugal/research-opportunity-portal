@@ -97,12 +97,8 @@ Example create body:
 
 ## GitHub and meaningful commits
 
-My own public GitHub repository:
-
-`GitHub Repository: https://github.com/amad-mugal/research-opportunity-portal.git`
+My own public GitHub repository: [research-opportunity-portal](https://github.com/amad-mugal/research-opportunity-portal)
 
 ## One-minute demo video
 
-Keeping the recording to 60 seconds or less and showing the running app:
-
-`Demonstration video: https://drive.google.com/file/d/1KfLKhGfMl1tx4O65hFFCpnoHQ7VhT6KQ/view?usp=share_link`
+Demonstration video (60 seconds or less): [Watch the demo](https://drive.google.com/file/d/1KfLKhGfMl1tx4O65hFFCpnoHQ7VhT6KQ/view?usp=share_link)
