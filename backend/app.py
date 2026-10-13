@@ -1,4 +1,3 @@
-"""Small Flask REST API for the Research Opportunity Portal."""
 import os
 from datetime import date
 
@@ -12,9 +11,7 @@ app = Flask(__name__, static_folder=os.path.join(ROOT, "frontend"), static_url_p
 REQUIRED = ["title", "description", "research_area", "faculty_name", "department",
             "required_skills", "positions", "deadline", "status"]
 
-
 def db_connection():
-    """Open a connection using environment variables (never store passwords here)."""
     return mysql.connector.connect(
         host=os.getenv("DB_HOST", "localhost"),
         port=int(os.getenv("DB_PORT", "3306")),
@@ -23,10 +20,8 @@ def db_connection():
         database=os.getenv("DB_NAME", "research_portal"),
     )
 
-
 def response_error(message, status):
     return jsonify({"error": message}), status
-
 
 def validate_opportunity(data, partial=False):
     if not isinstance(data, dict):
@@ -59,7 +54,6 @@ def validate_opportunity(data, partial=False):
         return "status must be Open or Closed."
     return None
 
-
 def query(sql, values=(), fetch=False):
     connection = db_connection()
     try:
@@ -73,28 +67,23 @@ def query(sql, values=(), fetch=False):
     finally:
         connection.close()
 
-
 @app.errorhandler(Error)
 def database_error(error):
     app.logger.exception("Database request failed")
     return response_error("Database error. Check that MySQL is running and configured; see README.md.", 500)
 
-
 @app.errorhandler(500)
 def server_error(error):
     return response_error("Internal server error.", 500)
-
 
 @app.get("/")
 def index():
     return send_from_directory(app.static_folder, "index.html")
 
-
 @app.get("/api/opportunities")
 def list_opportunities():
     records = query("SELECT * FROM opportunities ORDER BY id DESC", fetch=True)
     return jsonify(records), 200
-
 
 @app.post("/api/opportunities")
 def create_opportunity():
@@ -111,14 +100,12 @@ def create_opportunity():
     record = query("SELECT * FROM opportunities WHERE id = %s", (record_id,), fetch=True)[0]
     return jsonify(record), 201
 
-
 @app.get("/api/opportunities/<int:record_id>")
 def get_opportunity(record_id):
     rows = query("SELECT * FROM opportunities WHERE id = %s", (record_id,), fetch=True)
     if not rows:
         return response_error("Opportunity not found.", 404)
     return jsonify(rows[0]), 200
-
 
 @app.put("/api/opportunities/<int:record_id>")
 def update_opportunity(record_id):
@@ -137,14 +124,12 @@ def update_opportunity(record_id):
     updated = query("SELECT * FROM opportunities WHERE id = %s", (record_id,), fetch=True)[0]
     return jsonify(updated), 200
 
-
 @app.delete("/api/opportunities/<int:record_id>")
 def delete_opportunity(record_id):
     if not query("SELECT id FROM opportunities WHERE id = %s", (record_id,), fetch=True):
         return response_error("Opportunity not found.", 404)
     query("DELETE FROM opportunities WHERE id = %s", (record_id,))
     return jsonify({"message": "Opportunity deleted successfully."}), 200
-
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=int(os.getenv("PORT", "5000")), debug=True)
